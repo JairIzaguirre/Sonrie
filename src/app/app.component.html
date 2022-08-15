@@ -1,7 +1,46 @@
 <mat-toolbar color="light">
   <img src="assets/images/sonlog.webp" width="125" class="float-left" alt="Logotipo Sonreir">
   <span class="example-spacer"></span>
-  <button mat-icon-button class="float-right" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
+  <button mat-icon-button class="float-right m-2" aria-label="Example icon-button with menu icon" (click)="redirectTo('https://facebook.com/SonreirDC')">
+    <img width="100%" src="assets/images/icon-facebook-48px.png">
+  </button>
+  <button mat-icon-button class="float-right m-2" aria-label="Example icon-button with menu icon" (click)="redirectTo('https://instagram.com/sonreirdc/')">
+    <img width="100%" src="assets/images/icon-instagram-48px.png">
+  </button>
+  <button mat-icon-button class="float-right m-2" aria-label="Example icon-button with menu icon" (click)="redirectTo('https://api.whatsapp.com/send?phone=5215580329899&text=Enlace:%0Ahttps://fb.me/1bj3HlKnU%0A%0AHe+visto+esto+en+Facebook...&source_url=https://fb.me/1bj3HlKnU&icebreaker=He+visto+esto+en+Facebook...&app=facebook&entry_point=post_cta&jid=5215580329899@s.whatsapp.net&context=ARBCsxwz9lEIm0S6orfQEb74yZKUsbDcVOs93FhGteHHP4VCtpkd-x1bSRT5lvwfgkPBq_jDFA2UMKRnQCOpcd5QQTKGQTstyaPBbpjoIenEQHKSLIaFldCIc7o9JmehPX5NrUO19uO2iVp0chlRdYgTPCz0NS9OUUPD7wfrLGVp8WPWU1bc-vo1CES1M6K-E9NkuxohNhTjKXPez87VkSRDz_AcTl0RrBj_4XG9RCc7RqY2bMRI2Bo&fbclid=IwAR1iF9dt4nfCnR61amEVh1Pqs7Cm7ePWS6mSCKH3U_HXYm3-b9qpztdQlf4')">
+    <img width="100%" src="assets/images/icon-whatsapp-48px.png">
   </button>
 </mat-toolbar>
+<ngb-carousel *ngIf="slides">
+  <ng-template ngbSlide *ngFor="let slide of slides; let i = index;">
+    <div class="wrapper">
+      <img [src]="setSlideImage(i)" width="100%" alt="{{slide.header}}">
+    </div>
+    <div class="carousel-caption">
+      <h3>{{slide.header}}</h3>
+      <p> {{slide.txt}} </p>
+      <button mat-raised-button color="primary" (click)="openDialog(i)">Saber más</button>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<div class="container">
+  <section>
+    <div class="row">
+      <div class="col-sm-12 col-md-8 p-5">
+        <h2 class="mt-5">Sonreir <small>Dental Center</small></h2>
+        <p>Somos una Empresa Venezolano-Mexicana orientada al servicio y atención odontológica integral conformada por odontólogos Generales, Especialistas, Asistentes Dentales y Personal Administrativo altamente calificados y comprometidos con la paciente para brindarles la mejor experiencia en odontología y así poder transformar su sonrisa y recuperar su salud bucal.</p>
+        <button class="btn btn-primary">Saber más</button>
+      </div>
+      <div class="col-md-4 p-5 text-center">
+        <img src="assets/images/recurso1.webp" alt="Gráfico en vectores de una muela caricaturizada." class="img-thumbnail">
+      </div>
+    </div>
+  </section>
+</div>
+<section class="bg-primary">
+  <div class="container">
+    
+  </div>
+  &nbsp;
+  <div class="row"></div>
+</section>
