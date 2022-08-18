@@ -1,28 +1,25 @@
-<h2 class="p-3">Servicios</h2>
+<h2 class="pt-5 text-light">Servicios</h2>
 <div class="container p-5" #container>
-	<div class="left" *ngIf="totalPages > 1" (click)="currentPage != 1 && changePage(-1)" [ngClass]="{'disabled':currentPage === 1}"></div>
-	<div class="cards" [ngClass]="{'w-100': totalPages === 1}">
-		<div class="overflow" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
-			<div class="card" *ngFor="let i of arr; let index = index" [ngStyle]="{'width': cardWidth}">
-				<mat-card class="example-card">
-                    <mat-card-header>
-                      <mat-card-title>Shiba Inu</mat-card-title>
-                      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                    <mat-card-content>
-                      <p>
-                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                      </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button mat-button>LIKE</button>
-                      <button mat-button>SHARE</button>
-                    </mat-card-actions>
-                  </mat-card>
-			</div>
-		</div>
-	</div>
-	<div class="right" *ngIf="totalPages > 1" (click)="currentPage != totalPages && changePage(+1)"
-		[ngClass]="{'disabled':currentPage === totalPages}"></div>
+  <div class="left" *ngIf="totalPages > 1" (click)="currentPage != 1 && changePage(-1)"
+    [ngClass]="{'disabled':currentPage === 1}"></div>
+  <div class="cards" [ngClass]="{'w-100': totalPages === 1}">
+    <div class="overflow" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
+      <div class="card" *ngFor="let i of servicios; let index = index" [ngStyle]="{'width': cardWidth}">
+        <mat-card class="example-card">
+          <img mat-card-image [src]="i.img"
+            alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <h6>{{i.name| slice:0:15}} {{ i.name.length > 15 ? '...': ''}}</h6>
+            <p>{{i.description | slice:0:40}} ...</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <!-- <button mat-raised-button color="basic">Ver</button> -->
+            <button class="btn btn-sm btn-primary">Ver</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div class="right" *ngIf="totalPages > 1" (click)="currentPage != totalPages && changePage(+1)"
+    [ngClass]="{'disabled':currentPage === totalPages}"></div>
 </div>
