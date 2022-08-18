@@ -13,11 +13,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { ServiciosDentalesComponent } from './servicios-dentales/servicios-dentales.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogComponent
+    DialogComponent,
+    ServiciosDentalesComponent
   ],
   imports: [
     BrowserModule,
