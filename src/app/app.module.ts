@@ -8,6 +8,8 @@ import { MatCommonModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -30,7 +32,8 @@ import { ServiciosDentalesComponent } from './servicios-dentales/servicios-denta
     MatButtonModule,
     MatDialogModule,
     NgbModule,
-    MatCardModule
+    MatCardModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

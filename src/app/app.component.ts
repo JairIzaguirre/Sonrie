@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent, DialogData } from './dialog/dialog.component';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,28 +15,69 @@ export class AppComponent implements OnInit {
   title = 'Sonreir';
   mobRes:boolean = true;
   slides:DialogData[] = [{
-    imgUrl: 'assets/images/slider1b.webp',
-    imgMob: 'assets/images/slidermob1.webp',
+    imgUrl: 'assets/images/slider01-new.png',
+    imgMob: 'assets/images/slider1-mob-required.png',
     header: 'Clínica Dental',
     subheader: 'Sonreir | Dental Center | Clínica dental',
-    txt: 'Somos una Empresa Venezolano-Mexicana orientada al servicio y atención odontológica integral...',
-    description: 'Somos una Empresa Venezolano-Mexicana orientada al servicio y atención odontológica integral conformada por odontólogos Generales, Especialistas, Asistentes Dentales y Personal Administrativo altamente calificados y comprometidos con la paciente para brindarles la mejor experiencia en odontología y así poder transformar su sonrisa y recuperar su salud bucal.'
+    shortDescription: 'Somos una Empresa Venezolano-Mexicana orientada al servicio y atención odontológica integral...',
+    detail:[{
+      header:'Misión',
+      subheader:'',
+      detail:'Brindar asistencia odontológica profesional, confiable, segura y de excelencia a precio justo, con calidad humana, compromiso y responsabilidad en todas las especialidades odontológicas, para beneficio de todos nuestros pacientes y de su círculo familiar',
+      type:'P'
+    },{
+      header:'Valores',
+      subheader:'',
+      detail:'Confianza, Calidad, Excelencia, Puntualidad, Compromiso',
+      type: 'L'
+    },
+    {
+      header:'Visión',
+      subheader:'',
+      detail:'Convertirnos en la Clínica Dental por excelencia de CDMX, con el mejor equipo humano y tecnológico, realizando los tratamientos más exitosos y confiables en cada especialidad, logrando la confianza, fidelidad y compromiso total de nuestros pacientes, alcanzando niveles óptimos de atención Odontológica que nos permitirá expandir nuestros servicios a otras ciudades del país',
+      type: 'P'
+    }
+    ]
   },
   {
-    imgUrl: 'assets/images/slider2.webp',
-    imgMob: 'assets/images/slidermob2.webp',
-    header: 'Nuestra Misión',
+    imgUrl: 'assets/images/slider2-required.png',
+    imgMob: 'assets/images/slider2-mob-required.png',
+    header: 'Casos Clínicos',
     subheader: '',
-    txt: 'Brindar asistencia odontológica profesional, confiable, segura y de excelencia...',
-    description: 'Somos una Empresa Venezolano-Mexicana orientada al servicio y atención odontológica integral conformada por odontólogos Generales, Especialistas, Asistentes Dentales y Personal Administrativo altamente calificados y comprometidos con la paciente para brindarles la mejor experiencia en odontología y así poder transformar su sonrisa y recuperar su salud bucal.'
+    shortDescription: 'Reconstrucción total de Sonrisa con escáner e impresión digital, garantizado de por vida con Zirconios de última generación e implantes dentales.',
+    detail:[{
+      header:'',
+      subheader:'',
+      detail:'',
+      type: 'I',
+      imgUrl:'assets/images/misc/diseno-sonrisa.jpeg'
+    }]
   },
   {
-    imgUrl: 'assets/images/slider3.webp',
-    imgMob: 'assets/images/slidermob3.webp',
-    header: 'Socia Media',
+    imgUrl: 'assets/images/slider3-required.png',
+    imgMob: 'assets/images/slider3-mob-required.png',
+    header: 'Promociones Vigentes',
     subheader: '',
-    txt: 'Obten atención personalizada por medio de nuestras redes sociales...',
-    description: 'Somos una Empresa Venezolano-Mexicana orientada al servicio y atención odontológica integral conformada por odontólogos Generales, Especialistas, Asistentes Dentales y Personal Administrativo altamente calificados y comprometidos con la paciente para brindarles la mejor experiencia en odontología y así poder transformar su sonrisa y recuperar su salud bucal.'
+    shortDescription: 'Conoce nuestras promociones vigentes.',
+    detail:[{
+      header:'',
+      subheader:'',
+      detail:'Implantes, Ortodoncia, Resinas',
+      type: 'L'
+    }]
+  },
+  {
+    imgUrl: 'assets/images/slider4-required.png',
+    imgMob: 'assets/images/slider4-mob-required.png',
+    header: 'Tecnología de Vanguardia',
+    subheader: '',
+    shortDescription: 'Valoración sin costo',
+    detail:[{
+      header:'',
+      subheader:'',
+      detail:'Implantes, Ortodoncia, Resinas',
+      type: 'L'
+    }]
   }];
 
   constructor(config: NgbCarouselConfig, public dialog: MatDialog) {
