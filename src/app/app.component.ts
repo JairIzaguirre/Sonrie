@@ -102,7 +102,7 @@ export class AppComponent implements OnInit {
     window.open(url, '_blank');
   }
 
-  setSlideImage(index:number):string{
+  setSlideImage(index:number):string|undefined{
     return this.mobRes ? this.slides[index].imgMob : this.slides[index].imgUrl ;
   }
 

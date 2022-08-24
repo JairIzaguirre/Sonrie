@@ -11,11 +11,11 @@ export interface DialogDetail{
 
 export interface DialogData {
   imgUrl: string
-  imgMob: string
+  imgMob?: string
   header: string
-  subheader: string
+  subheader?: string
   shortDescription: string
-  detail:DialogDetail[]
+  detail?:DialogDetail[]
 }
 
 @Component({
