@@ -5,7 +5,7 @@
     <div class="container">
         <h2 mat-dialog-title>{{data.header}}</h2>
         <small>{{data.subheader}}</small>
-        <mat-dialog-content class="mat-typography" *ngIf="data.type && data.type != 'G'">
+        <mat-dialog-content class="mat-typography" *ngIf="!data.type || data.type != 'G'">
             <img [src]="data.imgUrl" width="100%" alt="{{data.header}}">
             <p class="mt-3">{{data.shortDescription}}</p>
             <div class="container" *ngIf="data.detail && data.detail.length > 0">
@@ -26,14 +26,43 @@
                 </div>
             </div>
         </mat-dialog-content>
-        <mat-dialog-content *ngIf="data.type && data.type != 'G'">
+        <mat-dialog-content *ngIf="data.type && data.type == 'G'">
+            <!-- Gallery -->
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <img src="assets/images/misc/diseno-sonrisa.jpeg" class="w-100 shadow-1-strong rounded mb-4" />
 
+                    <img src="assets/images/casos-clinicos/casos-clinicos-01.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" />
+
+                        <img src="assets/images/casos-clinicos/casos-clinicos-07.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" />
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="assets/images/casos-clinicos/casos-clinicos-02.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" />
+
+                    <img src="assets/images/casos-clinicos/casos-clinicos-03.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" />
+
+                    <img src="assets/images/casos-clinicos/casos-clinicos-06.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" />
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="assets/images/casos-clinicos/casos-clinicos-04.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" />
+
+                    <img src="assets/images/casos-clinicos/casos-clinicos-05.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" />
+
+                </div>
+            </div>
+            <!-- Gallery -->
         </mat-dialog-content>
         <mat-card-footer>
             <img src="assets/images/sonlog.webp" width="125" class="float-left" alt="Logotipo Sonreir">
         </mat-card-footer>
-    </div>
-    <div class="container">
-
     </div>
 </section>

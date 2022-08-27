@@ -41,9 +41,9 @@
 
 .left,
 .right {
-  height: 30px;
+  /* height: 30px;
   width: 30px;
-  background-color: #0072bc;
+  background-color: #0072bc; */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

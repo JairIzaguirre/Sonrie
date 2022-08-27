@@ -87,7 +87,7 @@ constructor(public dialog: MatDialog){
   }
 
   getCardsPerPage() {
-    return Math.floor(this.container.nativeElement.offsetWidth / 200);
+    return Math.floor(this.container.nativeElement.offsetWidth / 250);
   }
 
   changePage(incrementor:any) {

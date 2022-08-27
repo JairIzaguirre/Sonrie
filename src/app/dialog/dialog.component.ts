@@ -34,6 +34,10 @@ export class DialogComponent implements OnInit {
     //this.details = this.data.detail;
   }
 
+  isOdd(index:number):boolean{
+    return index % 2 !== 0;
+  }
+
   // toChips(detail:string):string[]{
   //   return 
   // }

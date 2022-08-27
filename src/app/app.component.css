@@ -2,6 +2,11 @@
   background-color: #e11668 !important;
 }
 
+.btn-gradient{
+  background-image: linear-gradient(to right top, #fe0185, #d644b2, #9e63ca, #6174cc, #2c7bba);
+  color: white;
+}
+
 .example-spacer {
   flex: 1 1 auto;
 }

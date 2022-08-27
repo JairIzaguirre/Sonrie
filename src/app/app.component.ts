@@ -82,6 +82,61 @@ export class AppComponent implements OnInit {
     }]
   }];
 
+  promociones:DialogData[] = [
+    {
+      imgUrl: 'assets/images/promociones/promociones-1.jpeg',
+      imgMob: 'assets/images/promociones/promociones-1.jpeg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+    {
+      imgUrl: 'assets/images/promociones/promociones-2.jpeg',
+      imgMob: 'assets/images/promociones/promociones-2.jpeg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+    {
+      imgUrl: 'assets/images/promociones/promociones-3.jpeg',
+      imgMob: 'assets/images/promociones/promociones-3.jpeg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+    {
+      imgUrl: 'assets/images/promociones/promociones-4.jpeg',
+      imgMob: 'assets/images/promociones/promociones-4.jpeg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+  ]
+
   constructor(config: NgbCarouselConfig, public dialog: MatDialog) {
   }
 
