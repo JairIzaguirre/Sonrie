@@ -51,7 +51,9 @@ export class AppComponent implements OnInit {
       detail:'',
       type: 'I',
       imgUrl:'assets/images/misc/diseno-sonrisa.jpeg'
-    }]
+    }],
+    images:['assets/images/misc/diseno-sonrisa.jpeg', 'assets/images/casos-clinicos/casos-clinicos-01.jpeg', 'assets/images/casos-clinicos/casos-clinicos-02.jpeg', 'assets/images/casos-clinicos/casos-clinicos-03.jpeg', 'assets/images/casos-clinicos/casos-clinicos-04.jpeg', 'assets/images/casos-clinicos/casos-clinicos-05.jpeg', 'assets/images/casos-clinicos/casos-clinicos-06.jpeg', 'assets/images/casos-clinicos/casos-clinicos-07.jpeg', 'assets/images/casos-clinicos/casos-clinicos-08.jpeg'],
+    type:'G'
   },
   {
     imgUrl: 'assets/images/slider3-required.png',

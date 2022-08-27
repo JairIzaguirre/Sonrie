@@ -15,7 +15,9 @@ export interface DialogData {
   header: string
   subheader?: string
   shortDescription: string
-  detail?:DialogDetail[]
+  detail?:DialogDetail[],
+  images?:string[],
+  type?:string
 }
 
 @Component({

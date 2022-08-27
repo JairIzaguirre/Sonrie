@@ -5,7 +5,7 @@
     <div class="container">
         <h2 mat-dialog-title>{{data.header}}</h2>
         <small>{{data.subheader}}</small>
-        <mat-dialog-content class="mat-typography">
+        <mat-dialog-content class="mat-typography" *ngIf="data.type && data.type != 'G'">
             <img [src]="data.imgUrl" width="100%" alt="{{data.header}}">
             <p class="mt-3">{{data.shortDescription}}</p>
             <div class="container" *ngIf="data.detail && data.detail.length > 0">
@@ -26,8 +26,14 @@
                 </div>
             </div>
         </mat-dialog-content>
+        <mat-dialog-content *ngIf="data.type && data.type != 'G'">
+
+        </mat-dialog-content>
         <mat-card-footer>
             <img src="assets/images/sonlog.webp" width="125" class="float-left" alt="Logotipo Sonreir">
         </mat-card-footer>
+    </div>
+    <div class="container">
+
     </div>
 </section>
