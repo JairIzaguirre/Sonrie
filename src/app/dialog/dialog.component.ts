@@ -17,7 +17,8 @@ export interface DialogData {
   shortDescription: string
   detail?:DialogDetail[],
   images?:string[],
-  type?:string
+  type?:string,
+  sectionId?:string
 }
 
 @Component({

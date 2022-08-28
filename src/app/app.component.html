@@ -24,11 +24,11 @@
 </ngb-carousel>
 
 <div class="container">
-  <section>
+  <section id="dental-center">
     <div class="row">
       <div class="col-sm-12 col-md-8 p-5">
         <h2 class="mt-5">Sonreir <small>Dental Center</small></h2>
-        <p>Somos una Empresa Venezolano-Mexicana orientada al servicio y atención odontológica integral conformada por
+        <p>Somos una Empresa Mexicana orientada al servicio y atención odontológica integral conformada por
           odontólogos Generales, Especialistas, Asistentes Dentales y Personal Administrativo altamente calificados y
           comprometidos con la paciente para brindarles la mejor experiencia en odontología y así poder transformar su
           sonrisa y recuperar su salud bucal.</p>
@@ -55,7 +55,7 @@
   </section>
 </div>
 
-<section style="background-color: #2e7abe;">
+<section id="servicios" style="background-color: #2e7abe;">
   <div class="container pb-5">
     <app-servicios-dentales></app-servicios-dentales>
   </div>
@@ -63,47 +63,28 @@
 
 <section>
   <div class="container p-5">
-    <h2>Promociones</h2>
     <div class="row">
-      <div class="col">
-        <p>Conoce nuestras promociones</p>
-      </div>
-      <div class="col">
+      <div class="col" id="promociones">
+        <h2>Promociones</h2>
+        <p>Conoce nuestras promociones.</p>
         <ngb-carousel *ngIf="promociones">
           <ng-template ngbSlide *ngFor="let slide of promociones; let i = index;">
             <div class="wrapper">
               <img [src]="slide.imgUrl" width="100%" alt="{{slide.header}}">
             </div>
-            <div class="carousel-caption">
-              <h3>{{slide.header}}</h3>
-              <p> {{slide.shortDescription}} </p>
-              <button mat-raised-button color="primary" (click)="openDialog(i)">Saber más</button>
-            </div>
           </ng-template>
         </ngb-carousel>
       </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container p-5">
-    <h2>Tecnología</h2>
-    <div class="row">
-      <div class="col-md-4 col-sm-12">
-        <div class="card">
-          <img class="card-img-top" src="assets/images/itero1.jpg" alt="Card image cap">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="card">
-          <img class="card-img-top" src="assets/images/itero2.jpg" alt="Card image cap">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="card">
-          <img class="card-img-top" src="assets/images/3d-printer.jpeg" alt="Card image cap">
-        </div>
+      <div class="col" id="tecnologia">
+        <h2>Tecnología</h2>
+        <p>Contamos con el mejor equipo.</p>
+        <ngb-carousel *ngIf="tecnologias">
+          <ng-template ngbSlide *ngFor="let slide of tecnologias; let i = index;">
+            <div class="wrapper">
+              <img [src]="slide.imgUrl" width="100%" alt="{{slide.header}}">
+            </div>
+          </ng-template>
+        </ngb-carousel>
       </div>
     </div>
   </div>

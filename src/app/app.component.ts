@@ -66,7 +66,9 @@ export class AppComponent implements OnInit {
       subheader:'',
       detail:'Implantes, Ortodoncia, Resinas',
       type: 'L'
-    }]
+    }],
+    type:'R',
+    sectionId:'#promociones'
   },
   {
     imgUrl: 'assets/images/slider4-required.png',
@@ -79,7 +81,9 @@ export class AppComponent implements OnInit {
       subheader:'',
       detail:'Implantes, Ortodoncia, Resinas',
       type: 'L'
-    }]
+    }],
+    type:'R',
+    sectionId:'#tecnologia'
   }];
 
   promociones:DialogData[] = [
@@ -137,6 +141,100 @@ export class AppComponent implements OnInit {
     },
   ]
 
+  tecnologias:DialogData[] = [
+    {
+      imgUrl: 'assets/images/tecnologia/tech-04.jpeg',
+      imgMob: 'assets/images/tecnologia/tech-04.jpeg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+    {
+      imgUrl: 'assets/images/tecnologia/tech-03.jpeg',
+      imgMob: 'assets/images/tecnologia/tech-03.jpeg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+    {
+      imgUrl: 'assets/images/tecnologia/tech-02.jpeg',
+      imgMob: 'assets/images/tecnologia/tech-02.jpeg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+    {
+      imgUrl: 'assets/images/tecnologia/tech-01.jpeg',
+      imgMob: 'assets/images/tecnologia/tech-01.jpeg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+    {
+      imgUrl: 'assets/images/itero1.jpg',
+      imgMob: 'assets/images/itero1.jpg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+    {
+      imgUrl: 'assets/images/itero2.jpg',
+      imgMob: 'assets/images/itero2.jpg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+    {
+      imgUrl: 'assets/images/3d-printer.jpeg',
+      imgMob: 'assets/images/3d-printer.jpeg',
+      header: 'Tecnología de Vanguardia',
+      subheader: '',
+      shortDescription: 'Valoración sin costo',
+      detail:[{
+        header:'',
+        subheader:'',
+        detail:'Implantes, Ortodoncia, Resinas',
+        type: 'L'
+      }]
+    },
+  ]
+
   constructor(config: NgbCarouselConfig, public dialog: MatDialog) {
   }
 
@@ -147,12 +245,17 @@ export class AppComponent implements OnInit {
   }
 
   openDialog(i:number):void {
-    const dialogRef = this.dialog.open(DialogComponent, {
-      data:this.slides[i]
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    const selected:DialogData = this.slides[i];
+    if(selected.type && selected.type == 'R'){
+      location.href = (selected.sectionId) ? selected.sectionId : '' ;
+    } else {
+      const dialogRef = this.dialog.open(DialogComponent, {
+        data:selected
+      });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+      });
+    }
   }
 
   redirectTo(url: string): void {
