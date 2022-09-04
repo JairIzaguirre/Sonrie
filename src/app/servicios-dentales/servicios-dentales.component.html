@@ -10,7 +10,7 @@
     <div class="overflow" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
       <div class="card" *ngFor="let i of servicios; let index = index" [ngStyle]="{'width': cardWidth}">
         <mat-card class="example-card">
-          <img mat-card-image [src]="i.imgUrl"
+          <img mat-card-image [src]="thumbails(index)"
             alt="Photo of a Shiba Inu"
             height="150">
           <mat-card-content>

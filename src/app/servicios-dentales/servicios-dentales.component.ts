@@ -13,7 +13,7 @@ export class ServiciosDentalesComponent implements OnInit {
     {
       header:'Estética Dental',
       shortDescription:'Por que la belleza de una sonrisa es tu carta de presentación, en sonreir manejamos tratamientos de alta estética dental, como Resinas, Carillas, Diseño de Sonrisa, Coronas libres de metal. Nuestros especialistas certificados te darán una experiencia como nunca.',
-      imgUrl:'assets/images/instagram/Imagen_Servicio_Estetica_Dental.jpeg'
+      imgUrl:'assets/images/img_late-2.jpg'
     },
     {
       header:'Implantes Dentales',
@@ -23,7 +23,7 @@ export class ServiciosDentalesComponent implements OnInit {
     {
       header:'Odontopediatría',
       shortDescription:'Los problemas bucales de los bebes y de los niños son tratados por el área de la odontopediatría.  Es muy importante que el primer contacto sea con un profesional experimentado en tratar a los mas pequeños.En Sonreír Dental Center contamos con l@s odontopediatrías más dedicadas y conscientes de la responsabilidad de atender a nuestros peques.',
-      imgUrl:'assets/images/instagram/Imagen_Odontopediatria.jpeg'
+      imgUrl:'assets/images/img_late-1.jpg'
     },
     {
       header:'Rehabilitación Integral',
@@ -33,7 +33,8 @@ export class ServiciosDentalesComponent implements OnInit {
     {
       header:'Ortodoncia',
       shortDescription:'Especialidad encargada de corregir la posición de los dientes y mejorar función y estética. Nuestros especialistas son miembros de las sociedades científicas nacionales e internacionales mas importantes en el ámbito de la ortodoncia, asimismo cuentan con certificación en los sistemas mas avanzados tales como damon, Invisalign, CCO, entre otros.',
-      imgUrl:'assets/images/instagram/Imagen_Ortodoncia.jpeg'
+      imgUrl:'assets/images/img_late-3.jpg',
+      imgMob:'assets/images/mini-brackets.webp'
     },
     {
       header:'Endodoncia',
@@ -107,6 +108,10 @@ constructor(public dialog: MatDialog){
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  thumbails(i:number):string | undefined{
+    return this.servicios[i].imgMob ? this.servicios[i].imgMob : this.servicios[i].imgUrl ;
   }
 
 }
